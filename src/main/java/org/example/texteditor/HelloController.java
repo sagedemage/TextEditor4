@@ -1,4 +1,4 @@
-package org.example.texteditor4;
+package org.example.texteditor;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.TextArea;
