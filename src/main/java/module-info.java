@@ -1,4 +1,4 @@
-module org.example.texteditor4 {
+module org.example.texteditor {
     requires javafx.controls;
     requires javafx.fxml;
 
