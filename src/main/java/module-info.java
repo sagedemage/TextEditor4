@@ -8,5 +8,4 @@ module org.example.texteditor {
     requires org.kordamp.bootstrapfx.core;
 
     opens org.example.texteditor to javafx.fxml;
-    exports org.example.texteditor;
 }

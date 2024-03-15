@@ -67,7 +67,6 @@
                     <compilerArgs>
                         <arg>-verbose</arg>
                         <arg>-Xlint:all</arg>
-                        <arg>-Xlint:-missing-explicit-ctor</arg>
                         <arg>-Werror</arg>
                     </compilerArgs>
                 </configuration>
