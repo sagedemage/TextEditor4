@@ -12,8 +12,8 @@ public class HelloController {
     private TextArea textBox;
 
     @FXML
-    protected void onOpenMenuItemClick() {
-        /* Open menu item opens a file from the file chooser dialog */
+    protected void onOpenTextFile() {
+        /* Open menu item opens a text file from the file chooser dialog */
         File text_file = HelloApplication.showOpenDialog();
 
         try {
