@@ -3,15 +3,38 @@ package org.example.texteditor;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextArea;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+
 public class HelloController {
     @FXML
     private TextArea textBox;
 
     @FXML
     protected void onOpenMenuItemClick() {
-        String content = textBox.getText();
-        HelloApplication.setWindowTitle(content);
-        System.out.println("Opened file");
+        /* Open menu item opens a file from the file chooser dialog */
+        File text_file = HelloApplication.showOpenDialog();
+
+        try {
+            Scanner myReader = new Scanner(text_file);
+
+            String text_content = "";
+
+            while(myReader.hasNextLine()) {
+                String line = myReader.nextLine();
+                line = line.concat("\n");
+                text_content = text_content.concat(line);
+            }
+
+            textBox.setText(text_content);
+            HelloApplication.setWindowTitle(text_file.getPath());
+            System.out.println(text_file.getAbsolutePath());
+            System.out.println("Opened file");
+        }
+        catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
     }
 
     @FXML
