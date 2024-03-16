@@ -17,6 +17,8 @@ public class HelloController {
         File text_file = HelloApplication.showOpenDialog();
 
         try {
+            /* Read the text file to get the content
+            and display it on the text area called textBox */
             Scanner myReader = new Scanner(text_file);
 
             String text_content = "";
