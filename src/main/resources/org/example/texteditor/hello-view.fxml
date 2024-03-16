@@ -13,7 +13,7 @@
     </padding>
     <MenuBar prefHeight="25.0" prefWidth="800.0">
         <Menu text="File">
-            <MenuItem text="Open" onAction="#onOpenMenuItemClick"/>
+            <MenuItem text="Open" onAction="#onOpenTextFile"/>
             <MenuItem text="Save" onAction="#onSaveMenuItemClick"/>
         </Menu>
     </MenuBar>
