@@ -13,7 +13,7 @@ public class HelloController {
 
     @FXML
     protected void onOpenTextFile() {
-        /* Open menu item opens a text file from the file chooser dialog */
+        /* Opens a text file from the file chooser dialog */
         File text_file = HelloApplication.showOpenDialog();
 
         try {
