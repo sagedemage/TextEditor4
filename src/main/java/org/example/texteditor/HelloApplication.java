@@ -11,11 +11,12 @@ import java.io.File;
 
 public class HelloApplication extends Application {
     private static Stage stage;
-    private final int WIDTH = 700;
-    private final int HEIGHT = 340;
 
     @Override
     public void start(Stage primaryStage) throws IOException {
+        final int WIDTH = 700;
+        final int HEIGHT = 340;
+
         stage = primaryStage;
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("hello-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), WIDTH, HEIGHT);
