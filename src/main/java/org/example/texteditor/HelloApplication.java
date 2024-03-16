@@ -11,7 +11,6 @@ import java.io.File;
 
 public class HelloApplication extends Application {
     private static Stage stage;
-
     @Override
     public void start(Stage primaryStage) throws IOException {
         final int WIDTH = 700;
