@@ -32,14 +32,20 @@ public class HelloApplication extends Application {
     public static File showOpenDialog() {
         /* Selects a file from the open file chooser dialog */
         FileChooser fileChooser = new FileChooser();
+        fileChooser.getExtensionFilters().addAll(
+                new ExtensionFilter("Text Files", "*.txt"),
+                new ExtensionFilter("All Files", "*.*")
+        );
         return fileChooser.showOpenDialog(stage);
     }
 
     public static File showSaveDialog() {
         /* Selects a file from the save file chooser dialog */
         FileChooser fileChooser = new FileChooser();
-        ExtensionFilter filter = new ExtensionFilter("Text Files", "txt");
-        fileChooser.setSelectedExtensionFilter(filter);
+        fileChooser.getExtensionFilters().addAll(
+                new ExtensionFilter("Text Files", "*.txt"),
+                new ExtensionFilter("All Files", "*.*")
+        );
         return fileChooser.showSaveDialog(stage);
     }
 
