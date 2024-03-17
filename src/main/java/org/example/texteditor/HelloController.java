@@ -38,9 +38,6 @@ public class HelloController {
                 textBox.setText(text_content);
                 HelloApplication.setWindowTitle(text_file.getPath());
                 this.openFile = text_file;
-
-                System.out.println(text_file.getAbsolutePath());
-                System.out.println("Opened file");
             } catch (FileNotFoundException e) {
                 e.printStackTrace();
             }
@@ -60,8 +57,6 @@ public class HelloController {
 
                 HelloApplication.setWindowTitle(text_file.getPath());
                 this.openFile = text_file;
-
-                System.out.println("Saved file");
             }
         } else {
             String text_content = textBox.getText();
@@ -76,7 +71,6 @@ public class HelloController {
             FileWriter myWriter = new FileWriter(file);
             myWriter.write(text_content);
             myWriter.close();
-            System.out.println("Saved file");
         } catch (IOException e) {
             e.printStackTrace();
         }
