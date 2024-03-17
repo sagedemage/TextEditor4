@@ -17,5 +17,5 @@
             <MenuItem text="Save" onAction="#onSaveMenuItemClick"/>
         </Menu>
     </MenuBar>
-    <TextArea fx:id="textBox" text="Hi" prefHeight="800.0" />
+    <TextArea fx:id="textBox" prefHeight="800.0" />
 </VBox>
