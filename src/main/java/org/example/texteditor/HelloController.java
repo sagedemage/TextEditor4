@@ -15,8 +15,8 @@ public class HelloController {
     private File openFile = new File("Untitled");
 
     @FXML
-    protected void onOpenTextFile() {
-        /* Opens a text file from the file chooser dialog */
+    protected void onOpenTextFileAction() {
+        /* An action to open a text file from the file chooser dialog */
         File text_file = HelloApplication.showOpenDialog();
 
         if (text_file != null) {
@@ -45,8 +45,8 @@ public class HelloController {
     }
 
     @FXML
-    protected void onSaveTextFile() {
-        /* Saves a text file */
+    protected void onSaveTextFileAction() {
+        /* An action to save a text file */
         if (this.openFile.getPath().equals("Untitled")) {
             File text_file = HelloApplication.showSaveDialog();
 
