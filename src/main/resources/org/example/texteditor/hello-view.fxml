@@ -14,7 +14,7 @@
     <MenuBar prefHeight="25.0" prefWidth="800.0">
         <Menu text="File">
             <MenuItem text="Open" onAction="#onOpenTextFile"/>
-            <MenuItem text="Save" onAction="#onSaveMenuItemClick"/>
+            <MenuItem text="Save" onAction="#onSaveTextFile"/>
         </Menu>
     </MenuBar>
     <TextArea fx:id="textBox" prefHeight="800.0" />

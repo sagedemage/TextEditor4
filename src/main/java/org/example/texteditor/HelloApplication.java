@@ -4,8 +4,10 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.FileChooser;
+import javafx.stage.FileChooser.ExtensionFilter;
 import javafx.stage.Stage;
 
+import java.io.FilenameFilter;
 import java.io.IOException;
 import java.io.File;
 
@@ -32,6 +34,15 @@ public class HelloApplication extends Application {
         /* Opens a file from the file chooser dialog */
         FileChooser fileChooser = new FileChooser();
         File selectedFile = fileChooser.showOpenDialog(stage);
+        return selectedFile;
+    }
+
+    public static File showSaveDialog() {
+        /* Saves a file from the file chooser dialog */
+        FileChooser fileChooser = new FileChooser();
+        ExtensionFilter filter = new ExtensionFilter("Text Files", "txt");
+        fileChooser.setSelectedExtensionFilter(filter);
+        File selectedFile = fileChooser.showSaveDialog(stage);
         return selectedFile;
     }
 
