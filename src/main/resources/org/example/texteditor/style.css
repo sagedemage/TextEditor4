@@ -1,0 +1,8 @@
+.root {
+    -fx-accent: rgba(96, 96, 96, 0.5);
+    -fx-base: black;
+    -fx-font: 14 Monospaced;
+    -fx-focus-color: -fx-accent;
+    -fx-control-inner-background: derive(-fx-base, 25%);
+    -fx-control-inner-background-alt: -fx-control-inner-background;
+}
