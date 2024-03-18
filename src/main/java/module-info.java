@@ -3,9 +3,5 @@ module org.example.texteditor {
     requires javafx.fxml;
     requires transitive javafx.graphics;
 
-    requires org.controlsfx.controls;
-    requires org.kordamp.ikonli.javafx;
-    requires org.kordamp.bootstrapfx.core;
-
     opens org.example.texteditor to javafx.fxml;
 }
