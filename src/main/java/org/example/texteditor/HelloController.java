@@ -52,7 +52,6 @@ public class HelloController {
 
             if (text_file != null) {
                 String text_content = textBox.getText();
-
                 saveTextFile(text_file, text_content);
 
                 HelloApplication.setWindowTitle(text_file.getPath());
