@@ -4,6 +4,7 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.FileChooser;
+import javafx.stage.FileChooser.ExtensionFilter;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -29,10 +30,23 @@ public class HelloApplication extends Application {
     }
 
     public static File showOpenDialog() {
-        /* Opens a file from the file chooser dialog */
+        /* Selects a file from the open file chooser dialog */
         FileChooser fileChooser = new FileChooser();
-        File selectedFile = fileChooser.showOpenDialog(stage);
-        return selectedFile;
+        fileChooser.getExtensionFilters().addAll(
+                new ExtensionFilter("Text Files", "*.txt"),
+                new ExtensionFilter("All Files", "*.*")
+        );
+        return fileChooser.showOpenDialog(stage);
+    }
+
+    public static File showSaveDialog() {
+        /* Selects a file from the save file chooser dialog */
+        FileChooser fileChooser = new FileChooser();
+        fileChooser.getExtensionFilters().addAll(
+                new ExtensionFilter("Text Files", "*.txt"),
+                new ExtensionFilter("All Files", "*.*")
+        );
+        return fileChooser.showSaveDialog(stage);
     }
 
     public static void main(String[] args) {
