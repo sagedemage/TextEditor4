@@ -20,6 +20,7 @@ public class HelloApplication extends Application {
         stage = primaryStage;
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("hello-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), WIDTH, HEIGHT);
+        scene.getStylesheets().add("org/example/texteditor/style.css");
         stage.setTitle("Untitled");
         stage.setScene(scene);
         stage.show();
