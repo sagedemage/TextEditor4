@@ -60,7 +60,6 @@ public class HelloController {
             }
         } else {
             String text_content = textBox.getText();
-
             saveTextFile(openFile, text_content);
         }
     }
