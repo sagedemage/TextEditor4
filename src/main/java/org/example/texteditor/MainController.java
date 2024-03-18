@@ -9,7 +9,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Scanner;
 
-public class HelloController {
+public class MainController {
     @FXML
     private TextArea textBox;
     private File openFile = new File("Untitled");
@@ -17,7 +17,7 @@ public class HelloController {
     @FXML
     protected void onOpenTextFileAction() {
         /* An action to open a text file from the file chooser dialog */
-        File text_file = HelloApplication.showOpenDialog();
+        File text_file = MainApplication.showOpenDialog();
 
         if (text_file != null) {
             try {
@@ -36,7 +36,7 @@ public class HelloController {
                 myReader.close();
 
                 textBox.setText(text_content);
-                HelloApplication.setWindowTitle(text_file.getPath());
+                MainApplication.setWindowTitle(text_file.getPath());
                 this.openFile = text_file;
             } catch (FileNotFoundException e) {
                 e.printStackTrace();
@@ -48,13 +48,13 @@ public class HelloController {
     protected void onSaveTextFileAction() {
         /* An action to save a text file */
         if (this.openFile.getPath().equals("Untitled")) {
-            File text_file = HelloApplication.showSaveDialog();
+            File text_file = MainApplication.showSaveDialog();
 
             if (text_file != null) {
                 String text_content = textBox.getText();
                 saveTextFile(text_file, text_content);
 
-                HelloApplication.setWindowTitle(text_file.getPath());
+                MainApplication.setWindowTitle(text_file.getPath());
                 this.openFile = text_file;
             }
         } else {

@@ -10,7 +10,7 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.io.File;
 
-public class HelloApplication extends Application {
+public class MainApplication extends Application {
     private static Stage stage;
     @Override
     public void start(Stage primaryStage) throws IOException {
@@ -18,7 +18,7 @@ public class HelloApplication extends Application {
         final int HEIGHT = 340;
 
         stage = primaryStage;
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("hello-view.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(MainApplication.class.getResource("hello-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), WIDTH, HEIGHT);
         scene.getStylesheets().add("org/example/texteditor/style.css");
         stage.setTitle("Untitled");
