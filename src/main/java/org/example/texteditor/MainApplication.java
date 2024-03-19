@@ -13,17 +13,22 @@ import java.io.File;
 public class MainApplication extends Application {
     private static Stage stage;
     @Override
-    public void start(Stage primaryStage) throws IOException {
+    public void start(Stage primaryStage) {
         final int WIDTH = 700;
         final int HEIGHT = 340;
 
         stage = primaryStage;
         FXMLLoader fxmlLoader = new FXMLLoader(MainApplication.class.getResource("hello-view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), WIDTH, HEIGHT);
-        scene.getStylesheets().add("org/example/texteditor/style.css");
-        stage.setTitle("Untitled");
-        stage.setScene(scene);
-        stage.show();
+
+        try {
+            Scene scene = new Scene(fxmlLoader.load(), WIDTH, HEIGHT);
+            scene.getStylesheets().add("org/example/texteditor/style.css");
+            stage.setTitle("Untitled");
+            stage.setScene(scene);
+            stage.show();
+        } catch(IOException e) {
+            e.printStackTrace();
+        }
     }
 
     public static void setWindowTitle(String title) {
