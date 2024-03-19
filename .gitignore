@@ -39,3 +39,7 @@ build/
 
 ### Text directory ###
 text/*.txt
+
+### Media files ###
+*.xcf
+images/*.png
