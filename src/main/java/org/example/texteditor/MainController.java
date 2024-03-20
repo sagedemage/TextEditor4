@@ -8,6 +8,7 @@ import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Scanner;
+import org.controlsfx.control.Notifications;
 
 public class MainController {
     @FXML
@@ -38,6 +39,12 @@ public class MainController {
                 textBox.setText(text_content);
                 MainApplication.setWindowTitle(text_file.getPath());
                 this.openFile = text_file;
+
+                Notifications.create().title("Opened File")
+                        .text("Opened the text file!")
+                        .darkStyle()
+                        .threshold(3, Notifications.create().title("Collapsed Notification"))
+                        .showInformation();
             } catch (FileNotFoundException e) {
                 e.printStackTrace();
             }
@@ -56,10 +63,22 @@ public class MainController {
 
                 MainApplication.setWindowTitle(text_file.getPath());
                 this.openFile = text_file;
+
+                Notifications.create().title("Saved New File")
+                        .text("Saved a new text file!")
+                        .darkStyle()
+                        .threshold(3, Notifications.create().title("Collapsed Notification"))
+                        .showInformation();
             }
         } else {
             String text_content = textBox.getText();
             saveTextFile(openFile, text_content);
+
+            Notifications.create().title("Saved File")
+                    .text("Saved the text file!")
+                    .darkStyle()
+                    .threshold(3, Notifications.create().title("Collapsed Notification"))
+                    .showInformation();
         }
     }
 
