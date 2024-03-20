@@ -6,6 +6,7 @@
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.input.KeyCodeCombination?>
 <VBox alignment="TOP_CENTER" xmlns:fx="http://javafx.com/fxml"
       fx:controller="org.example.texteditor.MainController">
     <padding>
@@ -13,8 +14,16 @@
     </padding>
     <MenuBar prefHeight="25.0" prefWidth="800.0">
         <Menu text="File">
-            <MenuItem text="Open" onAction="#onOpenTextFileAction"/>
-            <MenuItem text="Save" onAction="#onSaveTextFileAction"/>
+            <MenuItem text="Open" onAction="#onOpenTextFileAction">
+                <accelerator>
+                    <KeyCodeCombination code="O" control="DOWN" alt="UP" meta="UP" shift="UP" shortcut="UP" />
+                </accelerator>
+            </MenuItem>
+            <MenuItem text="Save" onAction="#onSaveTextFileAction">
+                <accelerator>
+                    <KeyCodeCombination code="S" control="DOWN" alt="UP" meta="UP" shift="UP" shortcut="UP" />
+                </accelerator>
+            </MenuItem>
         </Menu>
     </MenuBar>
     <TextArea fx:id="textBox" prefHeight="800.0" />
