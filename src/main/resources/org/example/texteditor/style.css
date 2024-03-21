@@ -8,6 +8,6 @@
 }
 
 .scroll-bar {
-    -fx-background-color: derive(-fx-base, 45%);
     -fx-color: derive(-fx-base, 15%);
+    -fx-background-color: derive(-fx-base, 45%);
 }
